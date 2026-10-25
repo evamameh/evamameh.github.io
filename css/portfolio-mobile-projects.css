@@ -1,0 +1,161 @@
+/* Technology cards use recognizable logos and the centered layout from Eva's reference. */
+.skill-card {
+    min-height: 156px;
+    height: auto;
+    padding: 24px 16px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    border: 1px solid color-mix(in srgb, var(--skill-color), #526078 72%);
+    border-radius: 22px;
+    background: radial-gradient(circle at 50% 35%, color-mix(in srgb, var(--skill-color), transparent 88%), transparent 62%), #0d1420;
+}
+
+.skill-card:hover {
+    border-color: color-mix(in srgb, var(--skill-color), transparent 45%);
+    background: radial-gradient(circle at 50% 35%, color-mix(in srgb, var(--skill-color), transparent 80%), transparent 65%), #111a27;
+    transform: translateY(-4px);
+    box-shadow: 0 14px 34px color-mix(in srgb, var(--skill-color), transparent 88%);
+}
+
+.skill-card > span {
+    display: none;
+}
+
+.skill-card strong {
+    order: 2;
+    color: #f8f4eb;
+    font: 600 15px Manrope, sans-serif;
+    text-align: center;
+}
+
+.skill-mark {
+    order: 1;
+    width: 58px;
+    height: 58px;
+    display: grid;
+    place-items: center;
+    font-style: normal !important;
+    filter: drop-shadow(0 8px 15px color-mix(in srgb, var(--skill-color), transparent 72%));
+}
+
+.skill-mark img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Give Eva's portrait more presence without squeezing the hero copy. */
+@media (min-width: 951px) {
+    .hero {
+        grid-template-columns: minmax(0, 1fr) minmax(390px, .72fr);
+        gap: clamp(52px, 6vw, 100px);
+    }
+
+    .portrait-card {
+        width: min(100%, 430px);
+    }
+}
+
+@media (min-width: 701px) and (max-width: 950px) {
+    .portrait-card {
+        width: min(100%, 390px);
+    }
+}
+
+@media (max-width: 700px) {
+    .portrait-card {
+        width: min(100%, 320px);
+    }
+}
+
+/* Portrait app screenshots retain the full device frame instead of being cropped into a landscape canvas. */
+.project-card[data-media-layout=wide] .project-preview {
+    background: linear-gradient(145deg, #14283a, #0b171f);
+}
+
+.project-card[data-media-layout=wide] .project-preview img {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left top;
+}
+
+.project-modal[data-media-layout=wide] .modal-dialog {
+    width: min(1280px, 100%);
+}
+
+.project-modal[data-media-layout=wide] .modal-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+}
+
+.project-modal[data-media-layout=wide] .modal-frame {
+    aspect-ratio: 2.23;
+}
+
+.project-modal[data-media-layout=wide] .modal-copy {
+    max-width: 900px;
+}
+
+.project-card[data-media-layout=portrait] .project-preview {
+    aspect-ratio: 1.25;
+    background: radial-gradient(circle at 50% 42%, #f4cbd329, transparent 52%), linear-gradient(145deg, #18243a, #0d1422);
+}
+
+.project-card[data-media-layout=portrait] .project-preview img {
+    inset: 16px auto 16px 50%;
+    width: auto;
+    height: calc(100% - 32px);
+    max-width: calc(100% - 32px);
+    object-fit: contain;
+    transform: translateX(-50%);
+    filter: drop-shadow(0 18px 24px #0007);
+}
+
+.project-modal[data-media-layout=portrait] .modal-dialog {
+    width: min(1040px, 100%);
+    padding: 30px;
+}
+
+.project-modal[data-media-layout=portrait] .modal-layout {
+    grid-template-columns: minmax(360px, 1fr) minmax(280px, .68fr);
+    gap: 36px;
+}
+
+.project-modal[data-media-layout=portrait] .modal-frame {
+    aspect-ratio: auto;
+    height: min(500px, calc(92vh - 170px));
+    min-height: 390px;
+    background: radial-gradient(circle at 50% 45%, #f4cbd31f, transparent 52%), linear-gradient(145deg, #1c2940, #111a2b);
+}
+
+.project-modal[data-media-layout=portrait] .modal-frame img {
+    width: auto;
+    height: calc(100% - 24px);
+    max-width: calc(100% - 24px);
+    object-fit: contain;
+    filter: drop-shadow(0 20px 28px #0008);
+}
+
+.project-modal[data-media-layout=portrait] .thumbnails {
+    justify-content: center;
+}
+
+@media (max-width: 800px) {
+    .project-modal[data-media-layout=portrait] .modal-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .project-modal[data-media-layout=portrait] .modal-frame {
+        height: min(58vh, 520px);
+        min-height: 360px;
+    }
+
+    .project-modal[data-media-layout=portrait] .modal-copy {
+        padding: 8px 4px 4px;
+    }
+}
