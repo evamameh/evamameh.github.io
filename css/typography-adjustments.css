@@ -1,0 +1,46 @@
+body {
+    font-size: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(54px, 7.2vw, 102px);
+}
+
+.hero-intro {
+    font-size: 16px;
+}
+
+.title h2,
+.section-heading h2,
+.contact h2 {
+    font-size: clamp(38px, 4.8vw, 66px);
+}
+
+.prose,
+.about-lead {
+    font-size: 15px;
+}
+
+.project-copy h3 {
+    font-size: 24px;
+}
+
+.project-copy .subtitle {
+    font-size: 16px;
+}
+
+.modal-copy h2 {
+    font-size: clamp(30px, 4.4vw, 54px);
+}
+
+@media (max-width: 700px) {
+    .hero h1 {
+        font-size: clamp(50px, 15vw, 72px);
+    }
+
+    .title h2,
+    .section-heading h2,
+    .contact h2 {
+        font-size: clamp(36px, 11vw, 52px);
+    }
+}
