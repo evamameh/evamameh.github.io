@@ -1,3 +1,5 @@
+@import url('./contact-form.css');
+
 /* Technology cards use recognizable logos and the centered layout from Eva's reference. */
 .skill-card {
     min-height: 156px;
