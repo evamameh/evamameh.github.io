@@ -1,46 +1,66 @@
 body {
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .hero h1 {
-    font-size: clamp(54px, 7.2vw, 102px);
+    font-size: clamp(46px, 6.2vw, 88px);
 }
 
 .hero-intro {
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .title h2,
 .section-heading h2,
 .contact h2 {
-    font-size: clamp(38px, 4.8vw, 66px);
+    font-size: clamp(34px, 4.2vw, 58px);
 }
 
 .prose,
 .about-lead {
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .project-copy h3 {
-    font-size: 24px;
+    font-size: 21px;
 }
 
 .project-copy .subtitle {
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .modal-copy h2 {
-    font-size: clamp(30px, 4.4vw, 54px);
+    font-size: clamp(28px, 3.8vw, 48px);
+}
+
+.hero-role,
+.timeline h3,
+.education h3,
+.contact-field input,
+.contact-field textarea {
+    font-size: 14px;
+}
+
+.project-copy > p:not(.subtitle),
+.section-heading > p,
+.contact-copy > p:not(.eyebrow) {
+    font-size: 12px;
+}
+
+.button,
+.filter,
+.contact-submit {
+    font-size: 11px;
 }
 
 @media (max-width: 700px) {
     .hero h1 {
-        font-size: clamp(50px, 15vw, 72px);
+        font-size: clamp(44px, 13vw, 64px);
     }
 
     .title h2,
     .section-heading h2,
     .contact h2 {
-        font-size: clamp(36px, 11vw, 52px);
+        font-size: clamp(32px, 9.5vw, 46px);
     }
 }
